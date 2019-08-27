@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+
+
+@author: Enes
+"""
+
+def finder(eq):
+    eq=eq.replace(" ","")
+    
+   
+    #print(str[0])
+   
+    for i in range(10):
+        neww=eq.replace("x",str(i))
+        s_no=eq.index("=")
+        
+        if eval(neww[:s_no])==eval(neww[s_no+1:]):
+            return i
+
+
+print(finder("1x1 * 5=555"))
+print(finder("3x - 7=27"))
+print(finder("2x0 / 5=52"))
+print(finder("1x + 5=24"))
